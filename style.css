@@ -1,0 +1,102 @@
+@font-face {
+  font-family: rejouice;
+  src: url("./media/Rejouice-Headline.woff2");
+}
+
+@font-face {
+  font-family: nb;
+  src: url(./media/NBInternationalProBoo.woff2);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: rejouice;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  z-index: 3;
+  overflow: hidden;
+}
+
+#hero {
+  background-color: #f00;
+  color: #fff;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+#hero video {
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+#hero-content {
+  background-color: rgba(0, 0, 0, 0.177);
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+nav {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.25em;
+}
+
+nav p,
+nav h3 {
+  font-weight: 100;
+  font-size: 1.18rem;
+}
+
+nav p {
+  font-family: nb;
+}
+
+#hero-content span {
+  background-color: transparent;
+  bottom: 0;
+  font-size: 21.75rem;
+  font-weight: 100;
+  line-height: 75%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+#cursor,
+#cursor span {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.555);
+  border-radius: calc(7rem * 2);
+  color: white;
+  display: flex;
+  font-family: nb;
+  font-size: 1rem;
+  height: 7rem;
+  justify-content: center;
+  position: absolute;
+  width: 7rem;
+  z-index: 1;
+}
+
+#page2 {
+  width: 100%;
+  height: 100vh;
+  background-color: beige;
+}
