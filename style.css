@@ -68,10 +68,10 @@ nav p {
   font-family: nb;
 }
 
-#hero-content span {
+#hero-text {
   background-color: transparent;
   bottom: 0;
-  font-size: 21.75rem;
+  font-size: 24.75rem;
   font-weight: 100;
   line-height: 75%;
   position: absolute;
