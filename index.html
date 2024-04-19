@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="shortcut icon"
-      href="./media/logo/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
@@ -18,7 +14,12 @@
   <body>
     <div id="main">
       <div id="hero">
-        <video autoplay loop muted src="./media/hero_video.mp4"></video>
+        <video
+          autoplay
+          loop
+          muted
+          src="./media/videos/hero/hero_video.mp4"
+        ></video>
         <div id="hero-content">
           <div id="cursor"><span>Play reel</span></div>
           <nav>
@@ -36,13 +37,30 @@
           </hgroup>
           <span> Paris / San Diego.</span>
         </section>
-        <div id="heading-separator"></div>
+        <div class="heading-separator"></div>
         <article id="about-text">
           <span
             >We are a digital brand accelerator. Our mission is to transform
             founders' visions into remarkable brands. Choose traditional
-            compensation or an equity offset through our Venture Model-your
-            vision, your decision.</span
+            compensation or an equity offset through our Venture Model
+            <div
+              style="
+                display: inline-flex;
+                position: relative;
+                width: calc(1vw + 0.7em);
+              "
+            >
+              <div
+                style="
+                  background-color: black;
+                  width: 100%;
+                  height: calc(0.18vw + 0.15rem);
+                  position: absolute;
+                  top: calc(-0.7vw - 0.35rem);
+                "
+              ></div>
+            </div>
+            your vision, your decision.</span
           >
         </article>
       </div>
@@ -68,11 +86,72 @@
       <section id="card-container">
         <div class="container-heading">
           <span>Transforming visions into brands.</span>
-          <span><span style="transform: rotate(90deg)">↵</span> See the work</span>
+          <span
+            ><div style="display: inline-block; transform: rotateY(180deg)">
+              <span>↵</span>
+            </div>
+            See the work</span
+          >
         </div>
-        <div class="cards"></div>
+        <div class="cards">
+          <div class="card">
+            <video
+              autoplay
+              loop
+              muted
+              src="./media/videos/cards/Work-01.mp4"
+            ></video>
+            <img
+              src="./media/images/Work-1.jpg"
+              width="880px"
+              height="1130px"
+            />
+          </div>
+          <div class="card">
+            <video
+              autoplay
+              loop
+              muted
+              src="./media/videos/cards/Work-02.mp4"
+            ></video>
+
+            <img
+              src="./media/images/Work-2.jpg"
+              width="880px"
+              height="1130px"
+            />
+          </div>
+          <div class="card">
+            <video
+              autoplay
+              loop
+              muted
+              src="./media/videos/cards/Work-03.mp4"
+            ></video>
+            <img
+              src="./media/images/Work-3.jpg"
+              width="880px"
+              height="1130px"
+            />
+          </div>
+        </div>
       </section>
-      </div>
+      <section id="philosophy">
+        <div id="philosophy-heading">
+          <hgroup style="display: flex; flex-direction: column">
+            <span>We operate on simple philosophy: </span>
+            <span>Quality over Quantity.</span>
+          </hgroup>
+        </div>
+        <div class="heading-separator"></div>
+        <article id="philosophy-text">
+          <span
+            >We collaborate with five clients each year.<br />This allows for
+            intense focus on the transformation and launch of your brand by our
+            very best team, which is the only team we have.</span
+          >
+        </article>
+      </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
@@ -90,3 +169,11 @@
     <script src="./script.js" />
   </body>
 </html>
+
+/*
+TODO: 
+1. position of image and video
+2. heading of philosophy
+*/
+
+
