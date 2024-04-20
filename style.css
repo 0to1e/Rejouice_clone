@@ -11,6 +11,8 @@
 :root {
   --BACKGROUND: #faf8f3;
   --ACCENT: #ff5f38;
+  --CONTAINER-PADDING: calc(5.5vw + 0.2em) calc(2.8vw + 0.2em) 0px
+    calc(2.8vw + 0.2em);
 }
 
 * {
@@ -78,14 +80,14 @@ nav {
 }
 
 nav span,
-nav p{
+nav p {
   color: white;
   z-index: 3;
   padding: 0.5rem;
   font-size: calc(0.55vw + 0.7rem);
 }
 
-nav button {
+#nav-btn {
   border-color: white;
 }
 
@@ -118,12 +120,12 @@ nav button {
   z-index: 1;
   opacity: 0;
 }
-#about,
+#intro,
 #philosophy,
 #strategy {
   display: flex;
   flex-direction: column;
-  padding: calc(5.5vw + 0.2em) calc(2.8vw + 0.2em) 0 calc(2.8vw + 0.2em);
+  padding: var(--CONTAINER-PADDING);
 }
 
 .headings {
@@ -151,7 +153,7 @@ nav button {
   margin-bottom: 0.3rem;
 }
 
-#about-text,
+#intro-text,
 .philosophy-text,
 .strategy-text {
   text-indent: 2ch;
@@ -181,7 +183,7 @@ nav button {
 }
 
 #card-container {
-  padding: calc(5.5vw + 0.2em) calc(2.8vw + 0.2em) 0px calc(2.8vw + 0.2em);
+  padding: var(--CONTAINER-PADDING);
   width: 100%;
 }
 
@@ -293,12 +295,11 @@ nav button {
   gap: calc(2vw + 0.5rem);
 }
 
-#seats-counter hgroup{
+#seats-counter hgroup {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 #large-count {
@@ -309,13 +310,41 @@ nav button {
   font-size: calc(1.1vw + 0.6rem);
 }
 
-#seat-btn{
+#seat-btn {
   padding: 1vw 1.5vw;
 }
 
+.touch-heading {
+  display: inline-block;
+  padding: var(--CONTAINER-PADDING);
+  font-size: 17vw;
+  line-height: 0.9em;
+  font-family: rejouice;
+  margin-top: 0.35em;
+  font-weight: 100;
+}
+
+
+.about {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about button {
+  font-size: 10vw;
+  background-color: transparent;
+  border: none;
+  margin-top: 1rem;
+  font-family: nb;
+  text-decoration: underline;
+}
 
 @media screen and (min-width: 426px) {
-  nav button {
+  #nav-btn {
     border: 0px none transparent;
   }
 
@@ -338,6 +367,10 @@ nav button {
   #seats .seats-container {
     width: 48vw;
   }
+
+  .touch-heading{
+    font-size: 8rem;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -348,7 +381,7 @@ nav button {
     opacity: 1;
   }
 
-  #seat-btn{
+  #seat-btn {
     display: none;
   }
 }
@@ -361,4 +394,15 @@ nav button {
   .card img {
     opacity: 0;
   }
+
+  .touch-heading{
+    font-size: 10vw;
+  }
 }
+
+
+/*
+about us
+built font size fix
+about us font size fiz
+*/
