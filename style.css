@@ -1,11 +1,11 @@
 @font-face {
   font-family: rejouice;
-  src: url("./media/Rejouice-Headline.woff2");
+  src: url("./media/fonts/Rejouice-Headline.woff2");
 }
 
 @font-face {
   font-family: nb;
-  src: url(./media/NBInternationalProBoo.woff2);
+  src: url("./media/fonts/NBInternationalProBoo.woff2");
 }
 
 :root {
@@ -93,8 +93,10 @@ nav button {
   z-index: inherit;
 }
 
-#cursor,
-#cursor span {
+#cursor1,
+#cursor1,
+#cursor2 span,
+#cursor2 span {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.555);
   border-radius: calc(7rem * 2);
@@ -106,49 +108,49 @@ nav button {
   position: absolute;
   width: 7rem;
   z-index: 1;
+  opacity: 0;
 }
 #about,
-#philosophy {
+#philosophy,
+#strategy {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: calc(5.5vw + 0.2em) calc(2.8vw + 0.2em) 0 calc(2.8vw + 0.2em);
 }
 
 .headings {
   align-items: flex-end;
   display: flex;
+  font-size: calc(1.1vw + 0.5rem);
   justify-content: space-between;
-  padding: calc(5.5vw + 0.2em) calc(2.8vw + 0.2em) 0 calc(2.8vw + 0.2em);
+  margin-bottom: 1rem;
   width: 100%;
 }
 
-.headings span {
+.philosophy-heading,
+.strategy-heading {
   display: flex;
   flex-direction: column;
   font-size: calc(1.1vw + 0.5rem);
-  text-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .heading-separator {
-  margin-top: 1em;
-  width: 94%;
+  width: 100%;
   height: 0.05em;
   background-color: black;
+  margin-bottom: 0.3rem;
 }
 
 #about-text,
-#philosophy-text {
+.philosophy-text,
+.strategy-text {
   text-indent: 2ch;
-  padding: 10px calc(5vw + 0.5rem) calc(20vw + 0.5rem) calc(2.5vw + 0.5rem);
-  font-size: calc(3.5vw + 0.5em);
+  text-align: start;
+  font-size: calc(3.5vw + 0.6rem);
+  margin: 1vw 0 1vw 0;
 }
-
-#philosophy-heading{
-  display: flex;
-  justify-content: left;
-  font-size: calc(1.1vw + 0.5rem);
-}
-
 
 #idkfn {
   font-size: 2vw;
@@ -157,7 +159,7 @@ nav button {
   align-items: center;
   justify-content: center;
   font-size: calc(3.5vw + 0.7em);
-  margin-bottom: calc(9vw + 0.5rem);
+  margin: calc(20vw + 0.2rem) 0 calc(10vw + 0.2rem) 0;
 }
 
 #idkfn span {
@@ -185,37 +187,129 @@ nav button {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(0.25vw + 0.5rem);
+  gap: 2rem;
   width: 100%;
+  height: auto;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .card {
-  width: 25.5rem;
-  background-color: peru;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
 .card video {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   position: relative;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 
 .card img {
   width: 100%;
   height: 100%;
-  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 
-@media screen and (min-width: 600px) {
+.card:hover img {
+  opacity: 0;
+  transition: all ease-in 0.4s;
+}
+
+#seats {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18vh 0;
+  position: relative;
+}
+
+#seats .seats-container {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seats-container img {
+  transform: scale(1.1);
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+}
+
+.seats-container video {
+  width: 100%;
+  height: auto;
+  transform: scale(1.4);
+  z-index: 2;
+}
+
+.seats-container svg {
+  height: auto;
+  width: 85%;
+  position: absolute;
+  z-index: 3;
+}
+
+#cursor2, #cursor2 span{
+  z-index: 4;
+  background-color: black;
+}
+
+@media screen and (min-width: 426px) {
   nav button {
     border: 0px none transparent;
+  }
+
+  .card img {
+    opacity: 1;
+  }
+
+  #card-container {
+    width: 100vw;
+  }
+
+  .cards {
+    gap: calc(0.25vw + 0.5rem);
+  }
+
+  .card {
+    width: calc(0.307 * 100vw);
+  }
+
+  #seats .seats-container {
+    width: 48vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #cursor1,
+  #cursor1,
+  #cursor2 span,
+  #cursor2 span {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1241px) {
+  .card {
+    width: calc(0.295 * 100vw);
+  }
+
+  .card img {
+    opacity: 0;
   }
 }

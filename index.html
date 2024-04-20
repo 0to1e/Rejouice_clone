@@ -13,7 +13,7 @@
   </head>
   <body>
     <div id="main">
-      <div id="hero">
+      <section id="hero">
         <video
           autoplay
           loop
@@ -21,28 +21,29 @@
           src="./media/videos/hero/hero_video.mp4"
         ></video>
         <div id="hero-content">
-          <div id="cursor"><span>Play reel</span></div>
+          <div id="cursor1"><span>Play reel</span></div>
           <nav>
             <span>The Venture Agency.</span>
             <button><span>Menu</span></button>
           </nav>
           <span id="hero-text">rejouice</span>
         </div>
-      </div>
-      <div id="about">
-        <section class="headings">
+      </section>
+      <section id="about">
+        <div class="headings">
           <hgroup>
-            <span>Full-service digital agency. </span>
-            <span>Two engagement models.</span>
+            <p>Full-service digital agency.</p>
+            <p>Two engagement models.</p>
           </hgroup>
           <span> Paris / San Diego.</span>
-        </section>
+        </div>
         <div class="heading-separator"></div>
         <article id="about-text">
           <span
-            >We are a digital brand accelerator. Our mission is to transform
-            founders' visions into remarkable brands. Choose traditional
-            compensation or an equity offset through our Venture Model
+            >We are a venture firm and digital agency. Our mission is to
+            transform founders' visions into remarkable brands. Choose
+            traditional compensation or an equity offset through our Venture
+            Model
             <div
               style="
                 display: inline-flex;
@@ -63,8 +64,8 @@
             your vision, your decision.</span
           >
         </article>
-      </div>
-      <div id="idkfn">
+      </section>
+      <section id="idkfn">
         <span
           >Agency & Venture
           <span
@@ -82,7 +83,7 @@
         >
         <p>Explore our services</p>
         <p>and engagement models</p>
-      </div>
+      </section>
       <section id="card-container">
         <div class="container-heading">
           <span>Transforming visions into brands.</span>
@@ -113,6 +114,7 @@
               loop
               muted
               src="./media/videos/cards/Work-02.mp4"
+              +
             ></video>
 
             <img
@@ -137,18 +139,69 @@
         </div>
       </section>
       <section id="philosophy">
-        <div id="philosophy-heading">
-          <hgroup style="display: flex; flex-direction: column">
-            <span>We operate on simple philosophy: </span>
-            <span>Quality over Quantity.</span>
-          </hgroup>
+        <div class="philosophy-heading">
+          <p>We operate on simple philosophy:</p>
+          <p>Quality over Quantity.</p>
         </div>
         <div class="heading-separator"></div>
-        <article id="philosophy-text">
+        <article class="philosophy-text">
           <span
             >We collaborate with five clients each year.<br />This allows for
             intense focus on the transformation and launch of your brand by our
             very best team, which is the only team we have.</span
+          >
+        </article>
+      </section>
+      <section id="seats">
+        <div id="cursor2"><span>Take One!</span></div>
+        <div class="seats-container">
+          <video
+            src="./media/videos/seats/RJ-BALL-BLUE-ORANGE-scaled.webm"
+            autoplay
+            loop
+            muted
+          ></video>
+          <img
+            src="./media/images/apply-poster.png"
+            width="230px"
+            height="226px"
+          />
+          <svg
+            class="abs tl:0 fit transform rotate:-90deg"
+            viewBox="0 0 100 100"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="49"
+              stroke="#fff"
+              stroke-width="0.25"
+              fill="none"
+              class="o:0.3 $$2$$ $$3$$ $$4$$ (.in-view):tween:all,2.8s,easeOutSlow dasharray:308 dashoffset:616 (.in-view):dashoffset:492.8"
+            ></circle>
+            <circle
+              cx="50"
+              cy="50"
+              r="49"
+              stroke="#fff"
+              stroke-width="0.25"
+              fill="none"
+              class="$$5$$ $$6$$ $$7$$ (.in-view):tween:all,2.8s,easeOutSlow dasharray:308 dashoffset:308 (.in-view):dashoffset:184.79999999999998"
+            ></circle>
+          </svg>
+        </div>
+      </section>
+      <section id="strategy">
+        <div class="strategy-heading">
+          <p>We operate on simple strategy:</p>
+          <p>Quality over Quantity.</p>
+        </div>
+        <div class="heading-separator"></div>
+        <article class="strategy-text">
+          <span
+            >Data matters, yet the emotion that drives buying decisions.We don't
+            believe in 'one size fits all.'We craft unique brand experiences
+            that deeply resontate with your audience and boost your KPIs</span
           >
         </article>
       </section>
@@ -169,11 +222,3 @@
     <script src="./script.js" />
   </body>
 </html>
-
-/*
-TODO: 
-1. position of image and video
-2. heading of philosophy
-*/
-
-

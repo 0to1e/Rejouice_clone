@@ -1,18 +1,20 @@
-var cursorBackground = document.getElementById("main");
-var cursor = document.getElementById("cursor");
-cursorBackground.addEventListener("mousemove", function (evt) {
-  gsap.to("#cursor", {
+var cursor1Background = document.getElementById("main");
+var cursor1 = document.getElementById("cursor1");
+var cursor2Background = document.getElementById("seats");
+var cursor2 = document.getElementById("cursor2");
+cursor1Background.addEventListener("mousemove", function (evt) {
+  gsap.to("#cursor1", {
+    x: evt.x,
+    y: evt.y,
+  });
+});
+cursor2Background.addEventListener("mousemove", function (evt) {
+  gsap.to("#cursor2", {
     x: evt.x,
     y: evt.y,
   });
 });
 
-TODO: gsap.to(".hero-span-animation", {
-  y: 0,
-  stagger: 0.05,
-  delay: 0.2,
-  duration: 0.1,
-});
 
 TODO: (function locoScroll() {
   gsap.registerPlugin(ScrollTrigger);
@@ -53,16 +55,3 @@ TODO: (function locoScroll() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 })();
-
-var card = document.getElementsByClassName("card");
-
-function videoAbsoluter(i, evt) {
-    card[i].video.style.position="absolute";
-    card[i].img.style.position="relative";
-}
-function imageAbsoluter(i) {
-    card[i].img.style.position="absolute";
-    card[i].video.style.position="relative";
-}
-
-card.addEventListener("mouseover", videoAbsoluter())
