@@ -11,8 +11,9 @@
 :root {
   --BACKGROUND: #faf8f3;
   --ACCENT: #ff5f38;
-  --CONTAINER-PADDING: calc(5.5vw + 0.2em) calc(2.8vw + 0.2em) 0px
+  --CONTAINER-PADDING: calc(5.5vw + 0.2em) calc(2.8vw + 0.2em) 0
     calc(2.8vw + 0.2em);
+  --REJOUICE: calc(26.5vw + 0.3rem);
 }
 
 * {
@@ -94,7 +95,7 @@ nav p {
 #hero-text {
   background-color: transparent;
   bottom: 0;
-  font-size: calc(26.5vw + 0.3rem);
+  font-size: var(--REJOUICE);
   font-weight: 100;
   line-height: 75%;
   position: absolute;
@@ -172,10 +173,12 @@ nav p {
   margin: calc(20vw + 0.2rem) 0 calc(10vw + 0.2rem) 0;
 }
 
-#idkfn span {
+#idkfn span,
+.about span {
   display: block;
   font-size: calc(0.8vw + 0.3rem);
   margin-bottom: 10px;
+  font-weight: 100;
 }
 
 #idkfn p {
@@ -209,6 +212,12 @@ nav p {
   height: 100%;
   position: relative;
 }
+.card .brand {
+  top: 82%;
+  left: 29%;
+  width: 40%;
+  height: auto;
+}
 
 .card video {
   width: 100%;
@@ -228,7 +237,7 @@ nav p {
   opacity: 0;
 }
 
-.card:hover img {
+.card:hover .image {
   opacity: 0;
   transition: all ease-in 0.4s;
 }
@@ -324,7 +333,6 @@ nav p {
   font-weight: 100;
 }
 
-
 .about {
   width: 100%;
   height: 120vh;
@@ -335,13 +343,80 @@ nav p {
 }
 
 .about button {
-  font-size: 10vw;
+  font-weight: 100;
+  font-size: calc(2.15vw + 2.23rem);
   background-color: transparent;
   border: none;
   margin-top: 1rem;
   font-family: nb;
   text-decoration: underline;
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: white;
+  padding: 1.6rem 2.7%;
+}
+
+footer h3 {
+  font-weight: 100;
+  font-size: 1.54rem;
+}
+
+footer button {
+  margin-top: 1.3rem;
+  padding: 0.8em 1em;
+  font-size: calc(0.4vw + 0.66rem);
+  border-radius: 2em;
+  background-color: transparent;
+  border: 0.07rem solid white;
+  color: white;
+}
+
+.upper-half,
+.nav-and-social {
+  display: flex;
+  justify-content: space-between;
+  gap: 6vw;
+  font-size: calc(0.4vw + 0.66rem);
+  line-height: 1.3rem;
+  text-wrap: nowrap;
+  flex-wrap: wrap;
+}
+
+footer a:any-link {
+  color: white;
+  text-decoration: none;
+}
+
+footer .address-contacts {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 30vh;
+}
+
+.contacts {
+  display: flex;
+  gap: 6vw;
+}
+
+footer span {
+  font-size: var(--REJOUICE);
+  font-family: rejouice;
+  margin-top: 8.05vw;
+  line-height: 60%;
+}
+
+.nav-and-social .nav li::marker,
+.social li::marker {
+  content: "";
+}
+
 
 @media screen and (min-width: 426px) {
   #nav-btn {
@@ -368,7 +443,7 @@ nav p {
     width: 48vw;
   }
 
-  .touch-heading{
+  .touch-heading {
     font-size: 8rem;
   }
 }
@@ -395,14 +470,7 @@ nav p {
     opacity: 0;
   }
 
-  .touch-heading{
+  .touch-heading {
     font-size: 10vw;
   }
 }
-
-
-/*
-about us
-built font size fix
-about us font size fiz
-*/
