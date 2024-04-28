@@ -332,14 +332,48 @@ nav p {
   margin-top: 0.35em;
   font-weight: 100;
 }
+.slider-section {
+  position: relative;
+  padding-bottom: 10vh;
+}
+
+.image-slider {
+  position: absolute;
+  top: 235;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.images {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  animation: slide 75s infinite linear;
+  margin-left: 0.75rem;
+}
+
+.images > img {
+  width: 22vmax;
+  height: fit-content;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .about {
   width: 100%;
-  height: 120vh;
+  height: 78vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: calc(22vw);
 }
 
 .about button {
@@ -347,7 +381,6 @@ nav p {
   font-size: calc(2.15vw + 2.23rem);
   background-color: transparent;
   border: none;
-  margin-top: 1rem;
   font-family: nb;
   text-decoration: underline;
 }
@@ -360,6 +393,7 @@ footer {
   background-color: black;
   color: white;
   padding: 1.6rem 2.7%;
+  flex-wrap: wrap;
 }
 
 footer h3 {
@@ -381,11 +415,25 @@ footer button {
 .nav-and-social {
   display: flex;
   justify-content: space-between;
-  gap: 6vw;
   font-size: calc(0.4vw + 0.66rem);
   line-height: 1.3rem;
   text-wrap: nowrap;
   flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.upper-half {
+  width: 100%;
+}
+
+.relax-div {
+  flex-grow: 11;
+  margin-bottom: 3vw;
+}
+.nav-and-social {
+  flex-grow: 1;
+  padding: 1vw 2vw;
+  font-size: calc(0.3vw + 0.74rem);
 }
 
 footer a:any-link {
@@ -397,18 +445,28 @@ footer .address-contacts {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: 30vh;
+  margin-top: 16.7vw;
+  flex-wrap: wrap;
+  font-size: calc(0.3vw + 0.74rem);
+  gap: 1.5rem;
+  padding: 0 2% 0 0 ;
 }
 
-.contacts {
+.address-contacts hgroup {
+  text-wrap: nowrap;
+  flex-grow: 14;
+}
+.address-contacts .contacts {
   display: flex;
-  gap: 6vw;
+  min-width: none;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 2rem;
 }
-
 footer span {
-  font-size: var(--REJOUICE);
+  font-size: calc(var(--REJOUICE) * 0.97);
   font-family: rejouice;
-  margin-top: 8.05vw;
+  margin-top: 7vh;
   line-height: 60%;
 }
 
@@ -416,7 +474,6 @@ footer span {
 .social li::marker {
   content: "";
 }
-
 
 @media screen and (min-width: 426px) {
   #nav-btn {

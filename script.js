@@ -55,3 +55,20 @@ TODO: (function locoScroll() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 })();
+
+
+let area = document.querySelector(".image-slider");
+const targets = document.querySelector(".images");
+
+
+area.addEventListener("mousedown", function () {
+  targets.forEach((target) => {
+    target.style.animationPlayState = "paused";
+  });
+});
+
+area.addEventListener("mouseup", function () {
+  targets.forEach((target) => {
+    target.style.animationPlayState = "running";
+  });
+});
