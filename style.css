@@ -152,6 +152,7 @@ nav p {
   height: 0.05em;
   background-color: black;
   margin-bottom: 0.3rem;
+  position: relative;
 }
 
 #intro-text,
@@ -173,11 +174,10 @@ nav p {
   margin: calc(20vw + 0.2rem) 0 calc(10vw + 0.2rem) 0;
 }
 
-#idkfn span,
-.about span {
+.about span,
+#idkfn > span{
   display: block;
-  font-size: calc(0.8vw + 0.3rem);
-  margin-bottom: 10px;
+  font-size: calc(.33vw + .7rem);
   font-weight: 100;
 }
 
@@ -323,32 +323,54 @@ nav p {
   padding: 1vw 1.5vw;
 }
 
-.touch-heading {
-  display: inline-block;
-  padding: var(--CONTAINER-PADDING);
-  font-size: 17vw;
-  line-height: 0.9em;
-  font-family: rejouice;
-  margin-top: 0.35em;
-  font-weight: 100;
-}
 .slider-section {
+  width: 100%;
   position: relative;
-  padding-bottom: 10vh;
+  padding: var(--CONTAINER-PADDING);
+}
+
+.slider-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60vmin;
+}
+
+.slider-heading p {
+  font-size: calc(6.95vw + 2rem);
+  font-weight: 100;
+  font-family: rejouice;
+  line-height: 0.9;
+  text-wrap: wrap;
+}
+.slider-heading a {
+  font-size: calc(1.06vw + 0.55rem);
+  font-weight: 100;
+  font-family: rejouice;
+  line-height: 0.9;
+  text-wrap: nowrap;
+}
+
+#touch-separator {
+  position: absolute;
+  top: calc(7vw + 15rem);
+  width: 93vw;
 }
 
 .image-slider {
   position: absolute;
-  top: 235;
+  top: calc(48vmin + 3rem);
   display: flex;
   flex-wrap: nowrap;
+  gap: 0.75rem;
 }
 
 .images {
+  position: relative;
   display: flex;
   align-items: flex-end;
   gap: 1.5rem;
-  animation: slide 75s infinite linear;
+  animation: slide 3s infinite linear;
   margin-left: 0.75rem;
 }
 
@@ -368,12 +390,11 @@ nav p {
 
 .about {
   width: 100%;
-  height: 78vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: calc(22vw);
+  padding:calc(28vmax + 4.6rem) 0 19vw 0;
 }
 
 .about button {
@@ -389,7 +410,6 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
   background-color: black;
   color: white;
   padding: 1.6rem 2.7%;
@@ -449,7 +469,7 @@ footer .address-contacts {
   flex-wrap: wrap;
   font-size: calc(0.3vw + 0.74rem);
   gap: 1.5rem;
-  padding: 0 2% 0 0 ;
+  padding: 0 2% 0 0;
 }
 
 .address-contacts hgroup {
