@@ -36,6 +36,11 @@ body {
   font-family: nb;
 }
 
+a{
+  color: black;
+  text-align: center;
+}
+
 #hero {
   background-color: var(--ACCENT);
   color: white;
@@ -69,15 +74,14 @@ nav {
 
 .outline-btn {
   border-radius: 4em;
-  border-style: solid;
-  border-color: white;
-  border-width: 1.5px;
+  border: 1.5px solid white;
   color: white;
   font-family: nb;
   font-size: calc(0.55vw + 0.7rem);
   font-weight: 100;
   padding: 0.5rem;
   background-color: transparent;
+  text-decoration: none;
 }
 
 nav span,
@@ -353,13 +357,13 @@ nav p {
 
 #touch-separator {
   position: absolute;
-  top: calc(7vw + 15rem);
+  top: calc(75% + .2rem);
   width: 93vw;
 }
 
 .image-slider {
   position: absolute;
-  top: calc(48vmin + 3rem);
+  top: calc(61.5% + .2rem);
   display: flex;
   flex-wrap: nowrap;
   gap: 0.75rem;
@@ -375,7 +379,8 @@ nav p {
 }
 
 .images > img {
-  width: 22vmax;
+  min-width: 9.5rem;
+  width: 22vw;
   height: fit-content;
 }
 
@@ -394,16 +399,15 @@ nav p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:calc(28vmax + 4.6rem) 0 19vw 0;
+  padding:calc(28vmax + 4.6rem) 0 calc(16vw + .5rem) 0;
 }
 
-.about button {
+.about a {
   font-weight: 100;
   font-size: calc(2.15vw + 2.23rem);
   background-color: transparent;
   border: none;
   font-family: nb;
-  text-decoration: underline;
 }
 
 footer {
@@ -439,11 +443,12 @@ footer button {
   line-height: 1.3rem;
   text-wrap: nowrap;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: .7rem;
 }
 
 .upper-half {
   width: 100%;
+  padding-top:2vw;
 }
 
 .relax-div {
@@ -465,10 +470,10 @@ footer .address-contacts {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: 16.7vw;
+  margin-top: calc(15.8vw);
   flex-wrap: wrap;
   font-size: calc(0.3vw + 0.74rem);
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 0 2% 0 0;
 }
 
@@ -486,7 +491,7 @@ footer .address-contacts {
 footer span {
   font-size: calc(var(--REJOUICE) * 0.97);
   font-family: rejouice;
-  margin-top: 7vh;
+  margin-top: 5vh;
   line-height: 60%;
 }
 
@@ -498,6 +503,7 @@ footer span {
 @media screen and (min-width: 426px) {
   #nav-btn {
     border: 0px none transparent;
+    text-decoration: underline;
   }
 
   .card img {
