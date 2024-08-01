@@ -374,7 +374,7 @@ nav p {
   display: flex;
   align-items: flex-end;
   gap: 1.5rem;
-  animation: slide 3s infinite linear;
+  animation: slide 75s infinite linear;
   margin-left: 0.75rem;
 }
 
@@ -493,6 +493,7 @@ footer span {
   font-family: rejouice;
   margin-top: 5vh;
   line-height: 60%;
+  font-weight: 100;
 }
 
 .nav-and-social .nav li::marker,
